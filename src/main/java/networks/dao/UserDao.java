@@ -3,12 +3,20 @@ package networks.dao;
 import networks.data.Database;
 import networks.model.User;
 
+import java.util.List;
+
 /**
  * @author Igor Hnes on 06.12.17.
  */
 public class UserDao {
 
-    public User[] getAll() {
+    private static final int FIRST_INDEX = 0;
+
+    public List<User> getAll() {
         return Database.getAllUsers();
+    }
+
+    public User getFirst() {
+        return Database.getAllUsers().get(FIRST_INDEX);
     }
 }

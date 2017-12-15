@@ -18,10 +18,14 @@ public class Database {
         final User user = new User("joyukr", "134", "Igor", 22, "Single");
         final User user2 = new User("joyukr", "134", "Alex", 22, "Single");
         final User user3 = new User("joyukr", "134", "Ann", 22, "Single");
+        final User user4 = new User("joyukr", "134", "Ann", 22, "Single");
+        final User user5 = new User("joyukr", "134", "Ann", 22, "Single");
 
         users.add(user);
         users.add(user2);
         users.add(user3);
+        users.add(user4);
+        users.add(user5);
 
         return users;
     }

@@ -20,8 +20,13 @@ public class UserService {
         return userDao.getFirst();
     }
 
-    public User getByName(String name) {
+    public List<User> getByName(String name) {
         final UserDao userDao = new UserDao();
         return userDao.getByName(name);
+    }
+
+    public User getByAge(int age) {
+        final UserDao userDao = new UserDao();
+        return userDao.getByAge(age);
     }
 }

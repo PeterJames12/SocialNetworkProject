@@ -1,5 +1,6 @@
 package networks.controller;
 
+import networks.exception.NoFoundUserException;
 import networks.model.User;
 import networks.service.UserService;
 
@@ -12,20 +13,8 @@ public class UserController {
 
     public static void main(String[] args) {
 
-        final UserService userService = new UserService();
-        List<User> users = userService.getAll();
-
-        for (User elem : users) {
-            System.out.println(elem);
+        if (true) {
+            throw new NoFoundUserException();
         }
-
-        System.out.println("All user printed");
-
-
-        User firstUser = userService.getFirst();
-        System.out.println(firstUser);
-
-        User user = userService.getByName("Alex");
-        System.out.println("Get by name: " + user);
     }
 }

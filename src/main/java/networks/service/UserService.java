@@ -19,4 +19,9 @@ public class UserService {
         final UserDao userDao = new UserDao();
         return userDao.getFirst();
     }
+
+    public User getByName(String name) {
+        final UserDao userDao = new UserDao();
+        return userDao.getByName(name);
+    }
 }

@@ -24,5 +24,8 @@ public class UserController {
 
         User firstUser = userService.getFirst();
         System.out.println(firstUser);
+
+        User user = userService.getByName("Alex");
+        System.out.println("Get by name: " + user);
     }
 }

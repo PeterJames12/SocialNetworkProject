@@ -19,4 +19,14 @@ public class UserDao {
     public User getFirst() {
         return Database.getAllUsers().get(FIRST_INDEX);
     }
+
+    public User getByName(String name) {
+        List<User> users = getAll();
+        for (User elem : users) {
+            if (name.equals(elem.getName())) {
+                return elem;
+            }
+        }
+        return null;
+    }
 }

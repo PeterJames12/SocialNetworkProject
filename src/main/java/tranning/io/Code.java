@@ -1,4 +1,4 @@
-package tranning;
+package tranning.io;
 
 /**
  * @author Igor Hnes on 06.12.17.

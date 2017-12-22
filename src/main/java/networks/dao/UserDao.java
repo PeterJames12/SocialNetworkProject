@@ -9,37 +9,25 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public class UserDao {
+public interface UserDao {
 
-    private static final int FIRST_INDEX = 0;
+    /**
+     * @return list of all users.
+     */
+    List<User> getAll();
 
-    public List<User> getAll() {
-        return Database.getAllUsers();
-    }
+    /**
+     * @return first user.
+     */
+    User getFirst();
 
-    public User getFirst() {
-        return Database.getAllUsers().get(FIRST_INDEX);
-    }
+    /**
+     * @return list of users by name.
+     */
+    List<User> getByName(String name);
 
-    public List<User> getByName(String name) {
-        List<User> users = getAll();
-        List<User> usersByName = new LinkedList<>();
-        for (User elem : users) {
-            if (name.equals(elem.getName())) {
-                usersByName.add(elem);
-            }
-        }
-        return usersByName;
-    }
-
-    public User getByAge(int age) {
-        List<User> users = getAll();
-
-        for (User elem : users) {
-            if (elem.getAge() == age) {
-                return elem;
-            }
-        }
-        return null;
-    }
+    /**
+     * @return user by age.
+     */
+    User getByAge(int age);
 }

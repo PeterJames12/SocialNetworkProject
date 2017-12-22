@@ -8,25 +8,29 @@ import java.util.List;
 /**
  * @author Igor Hnes on 06.12.17.
  */
-public class UserService {
+public interface UserService {
 
-    public List<User> getAll() {
-        final UserDao userDao = new UserDao();
-        return userDao.getAll();
-    }
+    /**
+     * @return list of all users.
+     */
+    List<User> getAll();
 
-    public User getFirst() {
-        final UserDao userDao = new UserDao();
-        return userDao.getFirst();
-    }
+    /**
+     * @return first user.
+     */
+    User getFirst();
 
-    public List<User> getByName(String name) {
-        final UserDao userDao = new UserDao();
-        return userDao.getByName(name);
-    }
+    /**
+     * @return user by given name.
+     */
+    List<User> getByName(String name);
 
-    public User getByAge(int age) {
-        final UserDao userDao = new UserDao();
-        return userDao.getByAge(age);
-    }
+    /**
+     * @return user by age.
+     */
+    User getByAge(int age);
+
+    void changePassword(User user, String newPassword);
+
+    void happyBirthday(User user);
 }

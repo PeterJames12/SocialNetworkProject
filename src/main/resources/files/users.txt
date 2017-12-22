@@ -1,0 +1,6 @@
+Name: Alex
+Email: alex@ale.com
+Password: flerj93rerrh8
+Age: 19
+Status: SINGLE
+Birthday: 28.06.1995

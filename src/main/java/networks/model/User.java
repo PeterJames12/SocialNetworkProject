@@ -1,5 +1,7 @@
 package networks.model;
 
+import java.time.LocalDate;
+
 /**
  * @author Igor Hnes on 06.12.17.
  */
@@ -10,6 +12,7 @@ public class User {
     private String name;
     private int age;
     private String status;
+    private LocalDate birthday;
 
     public User(String email, String password, String name, int age, String status) {
         this.email = email;
@@ -20,6 +23,14 @@ public class User {
     }
 
     public User() {
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     public String getName() {

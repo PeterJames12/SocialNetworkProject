@@ -15,7 +15,7 @@ public class Database {
 
         List<User> users = new LinkedList<>();
 
-        final User user = new User("joyukr", "134", "Igor", 22, "Single");
+        final User user = new User("joyukr@ukr.net", "134", "Igor", 22, "Single");
         final User user2 = new User("joyukr", "134", "Alex", 22, "Single");
         final User user3 = new User("joyukr", "134", "Ann", 22, "Single");
         final User user4 = new User("joyukr", "134", "Ann", 22, "Single");
